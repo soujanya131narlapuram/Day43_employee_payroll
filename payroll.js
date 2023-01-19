@@ -1,11 +1,11 @@
 class EmployeePayrollData
 {
-   get id(){return this.id;}
+    get id(){return this.id;}
     set id(id){
      this.id=id;
     }
-    get name(){return this._name;}
-    set name(name)
+    get name(){ return this._name;}
+    set name(name){
        let nameRegex=RegExp('^[A-Z]{1}[a-zA-z\\s]{2,}$')
         if(nameRegex.test(name))
         this._name=name;
@@ -43,5 +43,5 @@ class EmployeePayrollData
         return "id="+this.id+",name= ' "  +this.name+", gender=' " +this.gender+",profilePic='"
         +this.profilePic+",department="+this.department+
         ",salary=" +this.salary+",startDate="+empDate+",note=" +this.note;
-    }             
-} 
+    } 
+}   
